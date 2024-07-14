@@ -1,0 +1,11 @@
+target/
+bin/
+
+### Eclipse ###
+.classpath
+.project
+.settings
+application.properties
+
+### Others ###
+.DS_Store
