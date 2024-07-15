@@ -92,7 +92,7 @@ export default {
 <template>
     
     <div class="container-fluid">
-        <h1>Update Sticker</h1>
+        <h1 class="my-2 fw-semibold">Update Sticker</h1>
         <form class="g-3" @submit.prevent="updateSticker" novalidate>
             <div class="row">
                 <div class="col-12 col-md-4 mb-3">
@@ -138,10 +138,15 @@ export default {
             <div class="row mb-3">
                 <div class="col d-flex justify-content-end content">
                     <button id="btn" type="submit"
-                        class="btn col-12 col-md-2 btn-primary">Update</button>
+                        class="btn col-12 col-md-2">Update</button>
                 </div>
             </div>
         </form>
     </div>
- 
 </template>
+<style scoped>
+.btn{
+    background-color: greenyellow;
+    color: black;
+}
+</style>

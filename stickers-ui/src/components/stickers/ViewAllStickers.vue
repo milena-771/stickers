@@ -24,7 +24,7 @@ export default {
 }
 </script>
 <template>
-        <h1>View All Stickers</h1>
+        <h1 class="my-2 fw-semibold">View All Stickers</h1>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 mx-2" >
             <div class="col" v-for="sticker in stickers" :key="sticker.id" id="stickers">
                 <div class="card p-0" >    

@@ -105,8 +105,7 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid">
-        <h1 class="mb-2 fw-semibold">Create a sticker</h1>
+        <h1 class="my-2 fw-semibold">Create sticker</h1>
         <form class="g-3" @submit.prevent="post" novalidate>
             <div class="row">
                 <div class="col-12 col-md-4 mb-3">
@@ -163,7 +162,7 @@ export default {
             <div class="row mb-3">
                 <div class="col d-flex justify-content-end content">
                     <button id="btn" type="submit"
-                        class="btn col-12 col-md-2 btn-primary">Create</button>
+                        class="btn col-12 col-md-2">Create</button>
 
                     <!-- Toast - Success create event -->
                     <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -177,13 +176,15 @@ export default {
                 </div>
             </div>
         </form>
-    </div>
-
 </template>
 
-<style>
+<style scoped>
 .required::after {
     content: " *";
     color: #FF0000;
+}
+.btn{
+    background-color: greenyellow;
+    color: black;
 }
 </style>

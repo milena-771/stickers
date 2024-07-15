@@ -30,20 +30,35 @@ export default{
 }
 </script>
 <template>
-    <h1>Edit all stickers</h1>
-    <table>
-        <tr v-for="sticker in stickers" :key="sticker.id" id="stickers">
+    <h1 class="my-2 fw-semibold">Edit all stickers</h1>
+
+    <table class="table table-hover align-middle">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Created at</th>
+                <th>Name</th>
+                <th class="text-center">Delete/Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="sticker in stickers" :key="sticker.id" id="stickers">
             <td><img :src="sticker.imageUrl" class="img-thumbnail" style="width:3rem"></td>
-            <td class="text-center">{{ sticker.createdAt }}</td>
-            <td class="text-center">{{ sticker.name }}</td>
-            <td><button type="button" class="btn btn-outline-dark btn-sm" @click="deleteSticker(sticker.id)"><i class="bi bi-trash3"></i></button></td>
-            <td><router-link :to="{name:'sticker-update', params:{
-                                    id: sticker.id
-                                    }}" >
-                    <button type="button" class="btn btn-outline-dark btn-sm" ><i class="bi bi-pencil-square"></i></button>
-                </router-link>
+            <td>{{ sticker.createdAt }}</td>
+            <td>{{ sticker.name }}</td>
+            <td class="text-center">
+                <div class="my-2">
+                    <RouterLink :to="{ name:'sticker-update', params:{id: sticker.id}}">
+                        <button type="button" class="btn btn-outline-dark btn-sm" ><i class="bi bi-pencil-square"></i></button>
+                    </RouterLink>
+                </div>
+                <div class="my-2">
+                    <button type="button" class="btn btn-outline-dark btn-sm" @click="deleteSticker(sticker.id)"><i class="bi bi-trash3"></i></button>
+                </div>
             </td>
-        </tr>
+            </tr>
+        </tbody>
+
     </table>
 </template>
 <style>

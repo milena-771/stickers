@@ -9,7 +9,7 @@ INSERT INTO aspects(name)
 	VALUES('Matte'),('Glossy');
 	
 INSERT INTO stickers(name, description, image_url, price, created_at, size_id,aspect_id)
-	VALUES('Vue', 'Javascript framework', 'https://commons.wikimedia.org/wiki/File:Vue.js_Logo_2.svg','2.66', now(),(
+	VALUES('Vue', 'Javascript framework', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png','2.66', now(),(
 		SELECT id FROM sizes WHERE name = 'Small'
 		),(
 		SELECT id FROM aspects WHERE name = 'Matte'

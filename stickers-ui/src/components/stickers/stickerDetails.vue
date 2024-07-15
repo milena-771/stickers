@@ -35,7 +35,7 @@ export default {
 }
 </script>
 <template>
-    <h1>View Sticker detail</h1>
+    <h1 class="my-2 fw-semibold">View Sticker detail</h1>
     <div class="card m-5" > 
         <div class="row g-2">
             <div class="col-md-4 text-center">
